@@ -38,7 +38,7 @@ cd spring-boot-email-sender
 ### 2. Configure SMTP Settings
 - Update the SMTP settings in the application.properties file located in src/main/resources.
 - Replace the placeholder values with your actual email credentials.
-
+```
 properties
 
 - spring.mail.host=smtp.gmail.com
@@ -47,17 +47,18 @@ properties
 - spring.mail.password=yourpassword
 - spring.mail.properties.mail.smtp.auth=true
 - spring.mail.properties.mail.smtp.starttls.enable=true
+```
 
 ### 3. Run the Application
 - You can run the application using Maven. Execute the following command in the project directory:
   
-- mvn spring-boot:run
+```mvn spring-boot:run```
 
 - The application will start and run on http://localhost:8080.
 
 ### 4. Access the Email Sender Form
 - Open your web browser and navigate to:
 
-- http://localhost:8080/send-email
+```http://localhost:8080/send-email```
 
 - You will see a form where you can enter the recipient's email address. Upon submission, an email will be sent with a pre-defined subject and message.
