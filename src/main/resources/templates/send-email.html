@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Send Email</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h2 class="mt-5">Send Email</h2>
+    <form th:action="@{/send-email}" method="post">
+        <div class="form-group">
+            <label for="to">To:</label>
+            <input type="email" class="form-control" id="to" name="to" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+            <label for="text">Message:</label>
+            <textarea class="form-control" id="text" name="text" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Email</button>
+    </form>
+    <div th:if="${message}" class="alert alert-success mt-3" th:text="${message}"></div>
+</div>
+</body>
+</html>
